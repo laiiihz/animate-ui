@@ -1,0 +1,39 @@
+@import "static";
+
+@function selectorToString($selector) {
+  $selector: inspect($selector);
+  $selector: str_slice($selector, 2, -1);
+  @return $selector;
+}
+
+@function containModifier($selector) {
+  $selector: selectorToString($selector);
+  @if str_index($selector, $modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function containWhenFlag($selector) {
+  $selector: selectorToString($selector);
+  @if str_index($selector, $state-prefix) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function containerPseudoClass($selector) {
+  $selector: selectorToString($selector);
+  @if str_index($selector, ":") {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function hitSpecialRule($selector) {
+  @return containerPseudoClass($selector) or containModifier($selector) or
+    containWhenFlag($selector);
+}
