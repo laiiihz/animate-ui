@@ -46,11 +46,18 @@
     color: $primary_color;
     &:hover,
     &:focus {
-      color: mix($primary_color, #ffffff, 30%);
+      color: mix($primary_color, #ffffff, 60%);
     }
     &:active {
-      color: mix($primary_color, #000000, 30%);
+      color: mix($primary_color, #000000, 60%);
     }
+  }
+
+  @include state("circle"){
+    height: 40px;
+    width: 40px;
+    padding: unset;
+    border-radius: 20px;
   }
 
   @include state("flat") {
@@ -63,6 +70,16 @@
     }
     &:active {
       box-shadow: 0 0 0 2px mix($primary_color, #ffffff, 30%);
+    }
+  }
+
+  @include state("outline") {
+    box-shadow: unset;
+    &:hover,&:focus{
+      box-shadow: $elevation2;
+    }
+    &:active{
+      box-shadow: unset;
     }
   }
 

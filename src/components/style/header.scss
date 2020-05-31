@@ -1,0 +1,41 @@
+@import "mixins/mixins";
+@import "common/colors";
+
+@include b("header") {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: $elevation1;
+  position: relative;
+  @include state("blur") {
+    backdrop-filter: blur(10px);
+  }
+  @include state("dense") {
+    height: 60px;
+  }
+  @include state("fixed") {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  @include state("flat"){
+    box-shadow: unset;
+  }
+
+  @include state("under-line"){
+    border-bottom:1px solid rgba(0,0,0,.2);
+  }
+
+  @include e("leading") {
+    color: black;
+    line-height: 60px;
+  }
+  @include e("title") {
+    position: absolute;
+    top: 0;
+    left: 90px;
+    font-size: 26px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.75);
+  }
+}

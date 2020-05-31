@@ -51,10 +51,17 @@
   color: #42a5f5;
 }
 .a-button.is-text:hover, .a-button.is-text:focus {
-  color: #c6e4fc;
+  color: #8ec9f9;
 }
 .a-button.is-text:active {
-  color: #14324a;
+  color: #286393;
+}
+
+.a-button.is-circle {
+  height: 40px;
+  width: 40px;
+  padding: unset;
+  border-radius: 20px;
 }
 
 .a-button.is-flat {
@@ -67,6 +74,16 @@
 }
 .a-button.is-flat:active {
   box-shadow: 0 0 0 2px #c6e4fc;
+}
+
+.a-button.is-outline {
+  box-shadow: unset;
+}
+.a-button.is-outline:hover, .a-button.is-outline:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.a-button.is-outline:active {
+  box-shadow: unset;
 }
 
 .a-button--default {
@@ -102,6 +119,51 @@
 .a-button--small {
   padding: 4px 12px;
   font-size: 12px;
+}
+
+/*BEM*/
+/*state*/
+.a-header {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+}
+.a-header.is-blur {
+  backdrop-filter: blur(10px);
+}
+
+.a-header.is-dense {
+  height: 60px;
+}
+
+.a-header.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.a-header.is-flat {
+  box-shadow: unset;
+}
+
+.a-header.is-under-line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.a-header__leading {
+  color: black;
+  line-height: 60px;
+}
+
+.a-header__title {
+  position: absolute;
+  top: 0;
+  left: 90px;
+  font-size: 26px;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 /*# sourceMappingURL=index.css.map */

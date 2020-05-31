@@ -13,9 +13,12 @@
         'is-dash': dash,
         'is-text':text,
         'is-flat':flat,
+        'is-circle':circle,
+        'is-outline':outline,
       },
     ]"
   >
+    <i v-if="icon" class="material-icons">{{ icon }}</i>
     <slot></slot>
   </button>
 </template>
@@ -36,12 +39,15 @@ export default {
       type:String,
       default:'medium',
     },
+    icon:String,
+    circle:Boolean,
     rect: Boolean,
     disabled: Boolean,
     round: Boolean,
     dash:Boolean,
     text:Boolean,
     flat:Boolean,
+    outline:Boolean,
   },
   methods: {
     handleClick(event) {
