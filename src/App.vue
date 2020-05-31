@@ -1,12 +1,15 @@
 <template>
-<h1></h1>
+    <AButton>123</AButton>
 </template>
 
 <script>
 
-
+import AButton from "./components/button/AButton.vue";
 export default {
   name: "App",
+    components: {
+      AButton
+    }
 };
 </script>
 

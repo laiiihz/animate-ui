@@ -14,7 +14,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name animate-ui ./src/components/index.js"
+    "lib": "vue-cli-service build --target lib --name animate-ui ./src/components/index.js",
+    "dev-lib": "powershell ./build/build_dev_lib.ps1"
   },
   "dependencies": {
     "core-js": "^3.6.4",

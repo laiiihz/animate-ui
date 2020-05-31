@@ -1,5 +1,6 @@
 @import "static";
 @import "functions";
+@import "../shadow";
 /*BEM*/
 @mixin b($block) {
   $B: $namespace + "-" + $block !global;

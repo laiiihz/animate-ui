@@ -2,7 +2,7 @@
   <div id="app">
   
     <h1>test</h1>
-    <AButton>test</AButton>
+    <AButton >test</AButton>
   </div>
 </template>
 <script>

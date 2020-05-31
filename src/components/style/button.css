@@ -2,7 +2,106 @@
 /*state*/
 .a-button {
   cursor: pointer;
-  padding: 20px;
+  display: inline-block;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  /*
+  COLORS
+   */
+  /*
+  SIZE
+   */
+}
+.a-button:hover, .a-button:focus {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.a-button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.a-button.is-disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.a-button.is-round {
+  border-radius: 30px;
+}
+
+.a-button.is-outline {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.a-button.is-dash {
+  border: 2px rgba(0, 0, 0, 0.3) dashed;
+}
+
+.a-button.is-rect {
+  border-radius: 0;
+}
+
+.a-button.is-text {
+  box-shadow: unset;
+  color: #42a5f5;
+}
+.a-button.is-text:hover, .a-button.is-text:focus {
+  color: #c6e4fc;
+}
+.a-button.is-text:active {
+  color: #14324a;
+}
+
+.a-button.is-flat {
+  box-shadow: unset;
+  color: white;
+  position: relative;
+}
+.a-button.is-flat:hover, .a-button.is-flat:focus {
+  box-shadow: 0 0 0 5px #c6e4fc;
+}
+.a-button.is-flat:active {
+  box-shadow: 0 0 0 2px #c6e4fc;
+}
+
+.a-button--default {
+  background-color: white;
+}
+
+.a-button--primary {
+  background-color: #42a5f5;
+}
+
+.a-button--warn {
+  background-color: #ef5350;
+}
+
+.a-button--danger {
+  background-color: #ffee58;
+}
+
+.a-button--info {
+  background-color: #90a4ae;
+}
+
+.a-button--large {
+  padding: 12px 20px;
+  font-size: 20px;
+}
+
+.a-button--medium {
+  padding: 8px 16px;
+  font-size: 15px;
+}
+
+.a-button--small {
+  padding: 4px 12px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=button.css.map */

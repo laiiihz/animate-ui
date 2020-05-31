@@ -1353,8 +1353,14 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.npm.taobao.org/alphanum-sort/download/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-animate-ui@../:
-  version "0.1.0"
+"animate-ui@file:.\\animate-ui-build\\":
+  version "0.0.1"
+  dependencies:
+    core-js "^3.6.4"
+    vue "^2.6.11"
+
+"animate-ui@file:animate-ui-build":
+  version "0.0.1"
   dependencies:
     core-js "^3.6.4"
     vue "^2.6.11"

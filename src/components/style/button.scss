@@ -1,7 +1,105 @@
 @import "mixins/mixins";
-
+@import "common/colors";
 @include b(button) {
   cursor: pointer;
-  padding: 20px;
-}
+  display: inline-block;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  line-height: 1;
+  box-shadow: $elevation1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  &:hover,
+  &:focus {
+    box-shadow: $elevation3;
+  }
+  &:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
 
+  @include state("disabled") {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+
+  @include state("round") {
+    border-radius: 30px;
+  }
+
+  @include state("outline") {
+    border: 2px solid rgba(0, 0, 0, 0.4);
+  }
+
+  @include state("dash") {
+    border: 2px rgba(0, 0, 0, 0.3) dashed;
+  }
+
+  @include state("rect") {
+    border-radius: 0;
+  }
+
+  @include state("text") {
+    box-shadow: unset;
+    color: $primary_color;
+    &:hover,
+    &:focus {
+      color: mix($primary_color, #ffffff, 30%);
+    }
+    &:active {
+      color: mix($primary_color, #000000, 30%);
+    }
+  }
+
+  @include state("flat") {
+    box-shadow: unset;
+    color: white;
+    position: relative;
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 5px mix($primary_color, #ffffff, 30%);
+    }
+    &:active {
+      box-shadow: 0 0 0 2px mix($primary_color, #ffffff, 30%);
+    }
+  }
+
+  /*
+  COLORS
+   */
+  @include m("default") {
+    background-color: white;
+  }
+  @include m("primary") {
+    background-color: $primary_color;
+  }
+  @include m("warn") {
+    background-color: $warn_color;
+  }
+  @include m("danger"){
+    background-color: $danger_color;
+  }
+  @include m("info"){
+    background-color: $info_color;
+  }
+
+  /*
+  SIZE
+   */
+  @include m("large"){
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+
+  @include m("medium"){
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+
+  @include m("small"){
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+}
