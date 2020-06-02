@@ -29,6 +29,9 @@
   @include e("leading") {
     color: black;
     line-height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   @include e("title") {
     position: absolute;

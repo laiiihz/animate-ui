@@ -1,7 +1,10 @@
 import "./style/index.scss";
 import AButton from "./button/AButton";
 import AHeader from "./header/AHeader";
-const components = [AButton, AHeader];
+import AScrollbar from "./scrollbar/AScrollbar";
+import ACard from "./card/ACard";
+
+const components = [AButton, ACard, AHeader, AScrollbar];
 
 const install = function (Vue) {
   components.forEach((component) => {
@@ -12,5 +15,7 @@ const install = function (Vue) {
 export default {
   install,
   AButton,
+  ACard,
   AHeader,
+  AScrollbar,
 };

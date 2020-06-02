@@ -47,13 +47,14 @@
     &:hover,
     &:focus {
       color: mix($primary_color, #ffffff, 60%);
+      background-color: rgba(0, 0, 0, 0.05);
     }
     &:active {
       color: mix($primary_color, #000000, 60%);
     }
   }
 
-  @include state("circle"){
+  @include state("circle") {
     height: 40px;
     width: 40px;
     padding: unset;
@@ -75,10 +76,11 @@
 
   @include state("outline") {
     box-shadow: unset;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       box-shadow: $elevation2;
     }
-    &:active{
+    &:active {
       box-shadow: unset;
     }
   }
@@ -95,27 +97,27 @@
   @include m("warn") {
     background-color: $warn_color;
   }
-  @include m("danger"){
+  @include m("danger") {
     background-color: $danger_color;
   }
-  @include m("info"){
+  @include m("info") {
     background-color: $info_color;
   }
 
   /*
   SIZE
    */
-  @include m("large"){
+  @include m("large") {
     padding: 12px 20px;
     font-size: 20px;
   }
 
-  @include m("medium"){
+  @include m("medium") {
     padding: 8px 16px;
     font-size: 15px;
   }
 
-  @include m("small"){
+  @include m("small") {
     padding: 4px 12px;
     font-size: 12px;
   }

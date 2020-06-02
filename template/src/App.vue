@@ -2,7 +2,13 @@
   <div id="app">
   
     <h1>test</h1>
-    <AButton >test</AButton>
+    <a-header fixed blur>
+      Animate UI
+      <template slot="leading">
+        <a-button icon="face" text></a-button>
+      </template>
+    </a-header>
+  
   </div>
 </template>
 <script>

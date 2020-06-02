@@ -4,17 +4,17 @@
     :autofocus="autoFocus"
     :class="[
       'a-button',
-      'a-button--'+type,
-      'a-button--'+size,
+      'a-button--' + type,
+      'a-button--' + size,
       {
         'is-disabled': disabled,
         'is-round': round,
         'is-rect': rect,
         'is-dash': dash,
-        'is-text':text,
-        'is-flat':flat,
-        'is-circle':circle,
-        'is-outline':outline,
+        'is-text': text,
+        'is-flat': flat,
+        'is-circle': circle,
+        'is-outline': outline,
       },
     ]"
   >
@@ -31,23 +31,23 @@ export default {
       type: Boolean,
       default: true,
     },
-    type:{
-      type:String,
-      default:'default',
+    type: {
+      type: String,
+      default: "default",
     },
-    size:{
-      type:String,
-      default:'medium',
+    size: {
+      type: String,
+      default: "medium",
     },
-    icon:String,
-    circle:Boolean,
+    icon: String,
+    circle: Boolean,
     rect: Boolean,
     disabled: Boolean,
     round: Boolean,
-    dash:Boolean,
-    text:Boolean,
-    flat:Boolean,
-    outline:Boolean,
+    dash: Boolean,
+    text: Boolean,
+    flat: Boolean,
+    outline: Boolean,
   },
   methods: {
     handleClick(event) {

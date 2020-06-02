@@ -52,6 +52,7 @@
 }
 .a-button.is-text:hover, .a-button.is-text:focus {
   color: #8ec9f9;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .a-button.is-text:active {
   color: #286393;

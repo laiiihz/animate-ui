@@ -1,2 +1,21 @@
 @import "button";
 @import "header";
+@import "scrollbar";
+@import "card";
+@import "shadow";
+
+//shadow
+
+$elevationMap: (
+        0: $elevation0,
+        1: $elevation1,
+        2: $elevation2,
+        3: $elevation3,
+        4: $elevation4,
+);
+
+@for $item from 0 to 5{
+  .shadow_height_#{$item}{
+    box-shadow: map_get($elevationMap,$item);
+  }
+}

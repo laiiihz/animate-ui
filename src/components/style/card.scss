@@ -1,0 +1,72 @@
+@import "mixins/mixins";
+
+@include b("card") {
+  min-width: 50px;
+  min-height: 50px;
+  box-shadow: $elevation1;
+  border-radius: 8px;
+  transition: 0.2s;
+  margin: 5px;
+  display: inline-block;
+  padding: 10px;
+  overflow: hidden;
+  @include state("hover") {
+    &:hover {
+      box-shadow: $elevation3;
+    }
+    &:active {
+      box-shadow: $elevation1;
+    }
+  }
+  @include state("blur") {
+    backdrop-filter: blur(5px);
+  }
+  @include state("rect") {
+    border-radius: 0;
+  }
+
+  @include state("outline") {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: unset;
+  }
+
+  @include state("filled"){
+    padding: unset;
+  }
+
+  @include state("flat") {
+    box-shadow: unset;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @include state("pop"){
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+  @include state("art-elevation"){
+    box-shadow: $art_elevation2;
+    &:hover{
+      box-shadow: $art_elevation3;
+    }
+    &:active{
+      box-shadow: $art_elevation1;
+    }
+  }
+
+  @each $item in ("top-left","top-right","bottom-left","bottom-right"){
+    @include state($item){
+      border-#{$item}-radius: 0 !important;
+    }
+  }
+
+  @include e("title"){
+    font-size: 20px;
+  }
+}
