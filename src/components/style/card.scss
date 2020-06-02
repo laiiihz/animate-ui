@@ -10,6 +10,7 @@
   display: inline-block;
   padding: 10px;
   overflow: hidden;
+  position: relative;
   @include state("hover") {
     &:hover {
       box-shadow: $elevation3;
@@ -66,7 +67,12 @@
     }
   }
 
-  @include e("title"){
+  @include e("header"){
+    font-size: 20px;
+    display: block;
+  }
+  @include e("footer"){
+    display: block;
     font-size: 20px;
   }
 }

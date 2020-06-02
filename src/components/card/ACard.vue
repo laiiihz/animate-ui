@@ -21,10 +21,13 @@
       },
     ]"
   >
-    <div :class="['a-card__title']">
-      <slot name="title"></slot>
+    <div :class="['a-card__header']">
+      <slot name="header"></slot>
     </div>
     <slot></slot>
+    <div :class="['a-card__footer']">
+      <slot name="footer"></slot>
+    </div>
   </div>
 </template>
 
