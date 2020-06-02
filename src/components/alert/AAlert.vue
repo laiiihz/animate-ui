@@ -11,8 +11,9 @@
     <div class="a-alert--leading">
       <slot name="leading"></slot>
     </div>
-    <div class="a-alert--close" @click="onClose">
-      <i class="material-icons">close</i>
+    <div v-if="closable" class="a-alert--close" @click="onClose">
+      <span v-if="closeText" class="a-alert--close-text">{{ closeText }}</span>
+      <i v-if="!closeText" class="material-icons">close</i>
     </div>
     <span class="a-alert--title">{{ title }}</span>
     <span v-if="subTitle" class="a-alert--subTitle">{{ subTitle }}</span>
@@ -30,6 +31,11 @@ export default {
     title: String,
     subTitle: String,
     dark: Boolean,
+    closeText: String,
+    closable: {
+      type: Boolean,
+      default: true,
+    },
   },
   data: () => ({
     visible: true,
