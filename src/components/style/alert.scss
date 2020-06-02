@@ -1,0 +1,74 @@
+@import "mixins/mixins";
+@import "common/colors";
+@include b("alert") {
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 5px 40px;
+  line-height: 30px;
+  transition: 0.2s;
+  margin: 5px;
+  box-sizing: border-box;
+  position: relative;
+  /*
+type
+ */
+  @include m("default") {
+    color: #222222;
+    &:hover {
+      background-color: mix(#eeeeee, #000000, 70%);
+    }
+  }
+  @each $item in (primary, warn, info, danger) {
+    @include m($item) {
+      background-color: map_get($colorMap, $item);
+      &:hover {
+        background-color: mix(map_get($colorMap, $item), #ffffff, 70%);
+      }
+    }
+  }
+  @each $item in (primary-dark, warn-dark, info-dark, danger-dark) {
+    @include m($item) {
+      background-color: map_get($colorMap, $item);
+      color: white;
+      &:hover {
+        background-color: mix(map_get($colorMap, $item), #000000, 70%);
+      }
+    }
+  }
+
+  @include m("title") {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  @include m("subTitle") {
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  @include m("leading") {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+  }
+
+  @include m("close") {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    line-height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

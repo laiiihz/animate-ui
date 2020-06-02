@@ -31,7 +31,7 @@
     box-shadow: unset;
   }
 
-  @include state("filled"){
+  @include state("filled") {
     padding: unset;
   }
 
@@ -45,33 +45,33 @@
     }
   }
 
-  @include state("pop"){
-    &:hover{
+  @include state("pop") {
+    &:hover {
       transform: scale(1.2);
     }
   }
 
-  @include state("art-elevation"){
+  @include state("art-elevation") {
     box-shadow: $art_elevation2;
-    &:hover{
+    &:hover {
       box-shadow: $art_elevation3;
     }
-    &:active{
+    &:active {
       box-shadow: $art_elevation1;
     }
   }
 
-  @each $item in ("top-left","top-right","bottom-left","bottom-right"){
-    @include state($item){
+  @each $item in ("top-left", "top-right", "bottom-left", "bottom-right") {
+    @include state($item) {
       border-#{$item}-radius: 0 !important;
     }
   }
 
-  @include e("header"){
+  @include e("header") {
     font-size: 20px;
     display: block;
   }
-  @include e("footer"){
+  @include e("footer") {
     display: block;
     font-size: 20px;
   }

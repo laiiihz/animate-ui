@@ -1,5 +1,20 @@
-$primary_color:#42a5f5;
-$warn_color:#ef5350;
-$info_color:#90a4ae;
-$danger_color:#ffee58;
+$primary_color: #42a5f5;
+$warn_color: #ef5350;
+$info_color: #90a4ae;
+$danger_color: #ffee58;
 
+$primary_color_dark: #1565c0;
+$warn_color_dark: #c62828;
+$info_color_dark: #424242;
+$danger_color_dark: #f9a825;
+
+$colorMap: (
+  primary: $primary_color,
+  warn: $warn_color,
+  info: $info_color,
+  danger: $danger_color,
+  primary-dark: $primary_color_dark,
+  warn-dark: $warn_color_dark,
+  info-dark: $info_color_dark,
+  danger-dark: $danger_color_dark,
+);
