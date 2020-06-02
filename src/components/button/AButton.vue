@@ -15,6 +15,7 @@
         'is-flat': flat,
         'is-circle': circle,
         'is-outline': outline,
+        'is-art-elevation':artElevation,
       },
     ]"
   >
@@ -48,6 +49,7 @@ export default {
     text: Boolean,
     flat: Boolean,
     outline: Boolean,
+    artElevation:Boolean,
   },
   methods: {
     handleClick(event) {

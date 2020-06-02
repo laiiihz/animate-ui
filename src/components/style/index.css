@@ -87,6 +87,16 @@
   box-shadow: unset;
 }
 
+.a-button.is-art-elevation {
+  box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.12);
+}
+.a-button.is-art-elevation:hover, .a-button.is-art-elevation:focus {
+  box-shadow: 12px 12px 0 0 rgba(0, 0, 0, 0.12);
+}
+.a-button.is-art-elevation:active {
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.12);
+}
+
 .a-button--default {
   background-color: white;
 }

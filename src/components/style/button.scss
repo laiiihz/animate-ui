@@ -85,6 +85,16 @@
     }
   }
 
+  @include state("art-elevation"){
+    box-shadow: $art_elevation2;
+    &:hover,&:focus{
+      box-shadow: $art_elevation3;
+    }
+    &:active{
+      box-shadow: $art_elevation1;
+    }
+  }
+
   /*
   COLORS
    */
