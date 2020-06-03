@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a-header fixed blur>
+    <a-header fixed blur dense under-round>
       Animate UI
       <template slot="leading">
         <a-button icon="face" text></a-button>

@@ -5,7 +5,10 @@
   transition: all 0.3s ease-in-out;
 }
 
-.slide-x-enter,
+.slide-x-enter {
+  transform: translateX(-10px);
+  opacity: 0;
+}
 .slide-x-leave-to {
   transform: translateX(10px);
   opacity: 0;

@@ -1,0 +1,54 @@
+@import "mixins/mixins";
+@import "common/colors";
+@include b("checkbox") {
+  cursor: pointer;
+  position: relative;
+  @include state("flat") {
+    & input {
+      background-color: mix($primary_color, #ffffff, 30%);
+      box-shadow: unset;
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 5px $primary_color;
+      }
+      &:active {
+        box-shadow: unset;
+      }
+    }
+  }
+
+  & input {
+    transition: 0.3s;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: $elevation2;
+    &:hover,
+    &:focus {
+      box-shadow: $elevation3;
+    }
+    &:active {
+      box-shadow: $elevation1;
+    }
+    &:checked {
+      & + .a-checkbox__check-icon {
+        transform: scale(0.71) rotate(45deg);
+        opacity: 0;
+        top: -10px;
+      }
+    }
+  }
+  @include e("input") {
+    cursor: pointer;
+    outline: none;
+  }
+  @include e("check-icon") {
+    position: absolute;
+    left: 1px;
+    top: -7px;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+}

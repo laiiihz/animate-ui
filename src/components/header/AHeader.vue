@@ -8,6 +8,7 @@
         'is-fixed': fixed,
         'is-flat': flat,
         'is-under-line': underLine,
+        'is-under-round': underRound,
       },
     ]"
     :style="{
@@ -43,6 +44,7 @@ export default {
     height: Number,
     flat: Boolean,
     underLine: Boolean,
+    underRound: Boolean,
     dark: Boolean,
     backgroundColor: String,
   },
