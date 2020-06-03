@@ -18,12 +18,12 @@
     top: 0;
     left: 0;
   }
-  @include state("flat"){
+  @include state("flat") {
     box-shadow: unset;
   }
 
-  @include state("under-line"){
-    border-bottom:1px solid rgba(0,0,0,.2);
+  @include state("under-line") {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   @include e("leading") {
@@ -40,5 +40,11 @@
     font-size: 26px;
     line-height: 60px;
     color: rgba(0, 0, 0, 0.75);
+  }
+  @include e("menus") {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 60px;
   }
 }

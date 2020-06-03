@@ -4,8 +4,9 @@ import AHeader from "./header/AHeader";
 import AScrollbar from "./scrollbar/AScrollbar";
 import ACard from "./card/ACard";
 import AAlert from "./alert/AAlert";
+import AHeaderMenu from "./header/AHeaderMenu";
 
-const components = [AButton, ACard, AHeader, AAlert, AScrollbar];
+const components = [AButton, ACard, AHeader, AHeaderMenu, AAlert, AScrollbar];
 
 const install = function (Vue) {
   components.forEach((component) => {
@@ -18,6 +19,7 @@ export default {
   AButton,
   ACard,
   AHeader,
+  AHeaderMenu,
   AAlert,
   AScrollbar,
 };

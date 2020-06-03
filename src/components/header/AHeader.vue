@@ -16,6 +16,9 @@
       <slot name="leading"></slot>
     </div>
     <span class="a-header__title"><slot></slot></span>
+    <div class="a-header__menus">
+      <slot name="menu"></slot>
+    </div>
   </div>
 </template>
 

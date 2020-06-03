@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-  
-    <h1>test</h1>
     <a-header fixed blur>
       Animate UI
       <template slot="leading">
         <a-button icon="face" text></a-button>
+      </template>
+      <template slot="menu">
+        <a-button text>Home</a-button>
+        <a-button text>Components</a-button>
+        <a-button text>About</a-button>
       </template>
     </a-header>
   
