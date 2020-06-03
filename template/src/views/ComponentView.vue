@@ -1,12 +1,14 @@
 <template>
-  <div>
+  <padding-top-view>
     <h1>component</h1>
-  </div>
+  </padding-top-view>
 </template>
 
 <script>
+import PaddingTopView from "./PaddingTopView";
 export default {
   name: "ComponentView",
+  components: {PaddingTopView},
 };
 </script>
 

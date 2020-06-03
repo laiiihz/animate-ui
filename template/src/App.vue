@@ -6,12 +6,14 @@
         <a-button icon="face" text></a-button>
       </template>
       <template slot="menu">
-        <a-button text to="Home">Home</a-button>
-        <a-button text @click="onclick">Components</a-button>
-        <a-button text>About</a-button>
+        <a-button text icon="home" to="Home">Home</a-button>
+        <a-button text icon="dashboard" to="ComponentView">Components</a-button>
+        <a-button text icon="face" to="About">About</a-button>
       </template>
     </a-header>
-    <router-view></router-view>
+    <transition name="slide-x" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 <script>

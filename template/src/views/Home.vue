@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <padding-top-view>
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <div style="height: 2000px;"></div>
+  </padding-top-view>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PaddingTopView from "./PaddingTopView";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    PaddingTopView,
+  },
+};
 </script>

@@ -6,6 +6,7 @@
       'a-button',
       'a-button--' + type,
       'a-button--' + size,
+      icon && $slots.default ? 'a-button-anime' : '',
       {
         'is-disabled': disabled,
         'is-round': round,
@@ -19,8 +20,19 @@
       },
     ]"
   >
-    <i v-if="icon" class="material-icons">{{ icon }}</i>
-    <slot></slot>
+    <i
+      v-if="icon"
+      class="material-icons"
+      :class="[
+        'a-button__icon',
+        { 'a-button__icon-anime': icon && $slots.default },
+      ]"
+    >
+      {{ icon }}
+    </i>
+    <span :class="[{ 'a-button__text-anime': icon && $slots.default }]">
+      <slot></slot>
+    </span>
   </button>
 </template>
 
