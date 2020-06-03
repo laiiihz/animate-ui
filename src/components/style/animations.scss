@@ -10,3 +10,16 @@
   transform: translateX(10px);
   opacity: 0;
 }
+
+.slide-y-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+.slide-y-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-y-enter,
+.slide-y-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
