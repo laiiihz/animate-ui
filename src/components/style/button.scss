@@ -44,6 +44,7 @@
   @include state("text") {
     box-shadow: unset;
     color: $primary_color;
+    background-color: transparent;
     &:hover,
     &:focus {
       color: mix($primary_color, #ffffff, 60%);
@@ -85,12 +86,13 @@
     }
   }
 
-  @include state("art-elevation"){
+  @include state("art-elevation") {
     box-shadow: $art_elevation2;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       box-shadow: $art_elevation3;
     }
-    &:active{
+    &:active {
       box-shadow: $art_elevation1;
     }
   }

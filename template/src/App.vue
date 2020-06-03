@@ -6,18 +6,23 @@
         <a-button icon="face" text></a-button>
       </template>
       <template slot="menu">
-        <a-button text>Home</a-button>
-        <a-button text>Components</a-button>
+        <a-button text to="Home">Home</a-button>
+        <a-button text @click="onclick">Components</a-button>
         <a-button text>About</a-button>
       </template>
     </a-header>
-  
+    <router-view></router-view>
   </div>
 </template>
 <script>
 export default {
-  name:"app",
-}
+  name: "app",
+  methods: {
+    onclick() {
+      this.$router.push({ name: "ComponentView" });
+    },
+  },
+};
 </script>
 <style lang="scss">
 #app {

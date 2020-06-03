@@ -15,7 +15,7 @@
         'is-flat': flat,
         'is-circle': circle,
         'is-outline': outline,
-        'is-art-elevation':artElevation,
+        'is-art-elevation': artElevation,
       },
     ]"
   >
@@ -49,11 +49,15 @@ export default {
     text: Boolean,
     flat: Boolean,
     outline: Boolean,
-    artElevation:Boolean,
+    artElevation: Boolean,
+    to: String,
   },
   methods: {
     handleClick(event) {
       if (!this.disabled) this.$emit("click", event);
+      if (this.to) {
+        this.$router.push({ name: this.to });
+      }
     },
   },
 };

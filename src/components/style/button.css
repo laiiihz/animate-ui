@@ -49,6 +49,7 @@
 .a-button.is-text {
   box-shadow: unset;
   color: #42a5f5;
+  background-color: transparent;
 }
 .a-button.is-text:hover, .a-button.is-text:focus {
   color: #8ec9f9;
