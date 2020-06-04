@@ -6,19 +6,21 @@
 @import "alert";
 @import "animations";
 @import "checkbox";
+@import "row";
+@import "column";
 
 //shadow
 
 $elevationMap: (
-        0: $elevation0,
-        1: $elevation1,
-        2: $elevation2,
-        3: $elevation3,
-        4: $elevation4,
+  0: $elevation0,
+  1: $elevation1,
+  2: $elevation2,
+  3: $elevation3,
+  4: $elevation4,
 );
 
-@for $item from 0 to 5{
-  .shadow_height_#{$item}{
-    box-shadow: map_get($elevationMap,$item);
+@for $item from 0 to 5 {
+  .shadow_height_#{$item} {
+    box-shadow: map_get($elevationMap, $item);
   }
 }

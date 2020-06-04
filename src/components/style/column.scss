@@ -1,0 +1,43 @@
+@import "mixins/mixins";
+@import "common/breakpoints";
+@mixin res($key, $map: $breakpoints) {
+  @if $key== "col" {
+    @content;
+  } @else {
+    @if map_has_key($map, $key) {
+      @media only screen and #{inspect(map_get($map, $key))} {
+        @content;
+      }
+    } @else {
+      @warn "undefine";
+    }
+  }
+}
+
+@include b("column") {
+  float: left;
+  box-sizing: border-box;
+  @for $i from 0 through 12 {
+    @each $item in ("col", "xs", "sm", "md", "lg", "xl") {
+      @include res($item) {
+        @include m(#{$item}+ "-" +#{$i}) {
+          @if ($i==0) {
+            display: none;
+          }
+          width: (100/12) * $i * 1%;
+        }
+        @include m(#{$item}+ "-offset-" +#{$i}) {
+          margin-left: (100/12) * $i * 1%;
+        }
+        @include m(#{$item}+ "-right-" +#{$i}) {
+          position: relative;
+          left: (100/12) * $i * 1%;
+        }
+        @include m(#{$item}+ "-left-" +#{$i}) {
+          position: relative;
+          right: (100/12) * $i * 1%;
+        }
+      }
+    }
+  }
+}
