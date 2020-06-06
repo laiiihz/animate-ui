@@ -63,6 +63,7 @@ export default {
     outline: Boolean,
     artElevation: Boolean,
     to: String,
+    dark: Boolean,
   },
   methods: {
     handleClick(event) {

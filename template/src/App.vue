@@ -11,9 +11,19 @@
         <a-button text icon="face" to="About">About</a-button>
       </template>
     </a-header>
-    <transition name="slide-x" mode="out-in">
-      <router-view></router-view>
-    </transition>
+    <a-container
+      :padding="{
+        xs: 0,
+        sm: 1,
+        md: 2,
+        lg: 3,
+        xl: 4,
+      }"
+    >
+      <transition name="slide-x" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </a-container>
   </div>
 </template>
 <script>

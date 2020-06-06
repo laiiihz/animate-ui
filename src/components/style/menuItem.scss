@@ -1,0 +1,72 @@
+@import "mixins/mixins";
+@import "common/colors";
+@include b("menu-item") {
+  height: 50px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+  line-height: 50px;
+  font-size: 18px;
+  padding: 0 10px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  & > span {
+    display: inline;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  & > i {
+    vertical-align: middle;
+  }
+  @include state("round") {
+    border-radius: 25px;
+    padding: 0 20px;
+  }
+  @include state("half-round") {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  @include state("shadow") {
+    box-shadow: $elevation0;
+    &:hover {
+      box-shadow: $elevation2;
+    }
+    &:active {
+      box-shadow: $elevation1;
+    }
+  }
+
+  @include state("active") {
+    background-color: $primary_color;
+  }
+
+  @include state("dark") {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  @include state("offset") {
+    &:hover > span {
+      transform: translateX(10px);
+    }
+  }
+  @include state("disabled") {
+    cursor: not-allowed;
+    opacity: 0.25;
+    &:hover,
+    &:active {
+      box-shadow: unset;
+      background-color: unset;
+
+      & > span {
+        transform: unset;
+      }
+    }
+  }
+}

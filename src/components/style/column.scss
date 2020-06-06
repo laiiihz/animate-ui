@@ -1,18 +1,5 @@
 @import "mixins/mixins";
 @import "common/breakpoints";
-@mixin res($key, $map: $breakpoints) {
-  @if $key== "col" {
-    @content;
-  } @else {
-    @if map_has_key($map, $key) {
-      @media only screen and #{inspect(map_get($map, $key))} {
-        @content;
-      }
-    } @else {
-      @warn "undefine";
-    }
-  }
-}
 
 @include b("column") {
   float: left;

@@ -1,6 +1,11 @@
 <template>
   <padding-top-view>
-    <h1>component</h1>
+    <a-row>
+      <a-column :col="4">
+        <div class="aside">1213</div>
+      </a-column>
+      <a-column :col="8">1</a-column>
+    </a-row>
   </padding-top-view>
 </template>
 
@@ -8,8 +13,16 @@
 import PaddingTopView from "./PaddingTopView";
 export default {
   name: "ComponentView",
-  components: {PaddingTopView},
+  components: { PaddingTopView },
+  data: () => ({
+    windowHeight: "",
+  }),
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.aside {
+  background-color: #42a5f5;
+  height: calc(100vh - 120px);
+}
+</style>

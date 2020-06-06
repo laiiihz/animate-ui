@@ -20,3 +20,30 @@ $breakpoints: (
     min-width: $--xl,
   ),
 );
+$--xs--padding: 0px !default;
+$--sm--padding: 10px !default;
+$--md--padding: 40px !default;
+$--lg--padding: 60px !default;
+$--xl--padding: 100px !default;
+
+$breakpoints-padding: (
+  "xs": $--xs--padding,
+  "sm": $--sm--padding,
+  "md": $--md--padding,
+  "lg": $--lg--padding,
+  "xl": $--xl--padding,
+);
+
+@mixin res($key, $map: $breakpoints) {
+  @if $key== "col" {
+    @content;
+  } @else {
+    @if map_has_key($map, $key) {
+      @media only screen and #{inspect(map_get($map, $key))} {
+        @content;
+      }
+    } @else {
+      @warn "undefine";
+    }
+  }
+}

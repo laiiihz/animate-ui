@@ -1,0 +1,48 @@
+@import "mixins/mixins";
+
+@include b("menu") {
+  list-style: none;
+  line-height: 50px;
+  padding: 10px;
+  transition: width 0.3s ease-in-out;
+  box-sizing: border-box;
+  width: 100%;
+  @include state("disabled") {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+  @each $item in ("vertical", "horizontal") {
+    @include state("border-" + $item) {
+      @if ($item== "vertical") {
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+      } @else {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  @include state("dark") {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.3);
+    border-width: 2px;
+  }
+
+  @include state("collapse") {
+    width: 71px;
+    padding: 10px 0;
+    & > .a-menu-item {
+      padding: unset;
+      margin: 0 10px;
+      border-radius: 25px;
+      vertical-align: middle;
+      text-align: center;
+      overflow: hidden;
+      &:hover > span {
+        transform: unset;
+      }
+      &:hover > i{
+        font-style: normal;
+      }
+    }
+  }
+}

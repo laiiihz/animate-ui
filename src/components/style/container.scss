@@ -1,0 +1,15 @@
+@import "mixins/mixins";
+@import "common/breakpoints";
+@each $item in ("xs", "sm", "md", "lg", "xl") {
+  @include res($item) {
+    @include b("container") {
+      transition: .3s ease-in-out;
+      padding:0 map_get($breakpoints-padding, $item);
+      @for $i from 0 through 12{
+        @include m(#{$item}+'-'+#{$i}){
+          padding: 0 50/12*$i*1%;
+        }
+      }
+    }
+  }
+}

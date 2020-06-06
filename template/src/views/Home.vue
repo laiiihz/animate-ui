@@ -1,7 +1,8 @@
 <template>
   <padding-top-view>
     <img alt="Vue logo" src="../assets/logo.png" />
-    <div style="height: 2000px;"></div>
+    <div style="width: 100%; height: 100px; background-color: #42a5f5;"></div>
+    <div style="height: 200px;"></div>
   </padding-top-view>
 </template>
 
