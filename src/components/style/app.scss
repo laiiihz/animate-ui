@@ -1,0 +1,10 @@
+@import "mixins/mixins";
+@include b("app") {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.4s;
+  @include state("dark") {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}

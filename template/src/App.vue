@@ -1,29 +1,36 @@
 <template>
   <div id="app">
-    <a-header fixed blur dense under-round>
-      Animate UI
-      <template slot="leading">
-        <a-button icon="face" text></a-button>
-      </template>
-      <template slot="menu">
-        <a-button text icon="home" to="Home">Home</a-button>
-        <a-button text icon="dashboard" to="ComponentView">Components</a-button>
-        <a-button text icon="face" to="About">About</a-button>
-      </template>
-    </a-header>
-    <a-container
-      :padding="{
-        xs: 0,
-        sm: 1,
-        md: 2,
-        lg: 3,
-        xl: 4,
-      }"
-    >
-      <transition name="slide-x" mode="out-in">
-        <router-view></router-view>
-      </transition>
-    </a-container>
+    <a-app :dark="$store.state.dark">
+      <a-header :dark="$store.state.dark" fixed blur dense under-round>
+        Animate UI
+        <template slot="leading">
+          <a-button icon="face" text></a-button>
+        </template>
+        <template slot="menu">
+          <a-button text icon="home" to="Home">Home</a-button>
+          <a-button text icon="dashboard" to="ComponentView"
+            >Components</a-button
+          >
+          <a-button text icon="face" to="About">About</a-button>
+          <a-button text icon="brightness_2" @click="handleDarkMode"
+            >DarkMode</a-button
+          >
+        </template>
+      </a-header>
+      <a-container
+        :padding="{
+          xs: 0,
+          sm: 1,
+          md: 2,
+          lg: 3,
+          xl: 4,
+        }"
+      >
+        <transition name="slide-x" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </a-container>
+    </a-app>
   </div>
 </template>
 <script>
@@ -33,28 +40,16 @@ export default {
     onclick() {
       this.$router.push({ name: "ComponentView" });
     },
+    handleDarkMode() {
+      this.$store.commit("changeDarkMode");
+    },
   },
 };
 </script>
-<style lang="scss">
+
+<style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  height: 100%;
+  width: 100%;
 }
 </style>

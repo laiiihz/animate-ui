@@ -11,6 +11,8 @@
         'is-shadow': shadow,
         'is-active': active,
         'is-disabled': disabled,
+        'is-title': title,
+        'is-sub-title': subTitle,
       },
     ]"
   >
@@ -32,6 +34,8 @@ export default {
     active: Boolean,
     leading: String,
     disabled: Boolean,
+    title: Boolean,
+    subTitle: Boolean,
   },
   computed: {
     dark() {

@@ -11,14 +11,17 @@ import AColumn from "./column/AColumn";
 import AContainer from "./container/AContainer";
 import AMenu from "./menu/AMenu";
 import AMenuItem from "./menu/AMenuItem";
-
+import AApp from "./app/AApp";
+import AH from "./heading/ah";
 const components = [
   AAlert,
+  AApp,
   AButton,
   ACard,
   AContainer,
   ACheckbox,
   AColumn,
+  AH,
   AHeader,
   AHeaderMenu,
   AMenu,
@@ -36,11 +39,13 @@ const install = function (Vue) {
 export default {
   install,
   AAlert,
+  AApp,
   AButton,
   ACard,
   AColumn,
   AContainer,
   ACheckbox,
+  AH,
   AHeader,
   AHeaderMenu,
   AMenu,

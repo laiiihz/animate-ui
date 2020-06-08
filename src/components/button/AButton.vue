@@ -17,6 +17,8 @@
         'is-circle': circle,
         'is-outline': outline,
         'is-art-elevation': artElevation,
+        'is-dark': dark,
+        'is-bold': bold,
       },
     ]"
   >
@@ -64,6 +66,7 @@ export default {
     artElevation: Boolean,
     to: String,
     dark: Boolean,
+    bold: Boolean,
   },
   methods: {
     handleClick(event) {

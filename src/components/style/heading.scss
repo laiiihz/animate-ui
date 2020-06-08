@@ -1,0 +1,8 @@
+@import "mixins/mixins";
+
+@include b("heading") {
+  transition: 0.3s;
+  @include state("dark") {
+    color: #eeeeee;
+  }
+}

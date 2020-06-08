@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import ComponentView from "../views/ComponentView";
+import InstallPage from "../page/InstallPage";
+import FontPage from "../page/FontPage";
 
 Vue.use(VueRouter);
 
@@ -15,6 +17,18 @@ const routes = [
     path: "/components",
     name: "ComponentView",
     component: ComponentView,
+    children: [
+      {
+        path: "install",
+        name: "install",
+        component: InstallPage,
+      },
+      {
+        path: "font",
+        name: "font",
+        component: FontPage,
+      },
+    ],
   },
   {
     path: "/about",

@@ -55,6 +55,10 @@
     border-radius: 0;
   }
 
+  @include state("bold") {
+    font-weight: bold;
+  }
+
   @include state("text") {
     box-shadow: unset;
     color: $primary_color;
@@ -112,23 +116,24 @@
     }
   }
 
+  @include state("dark") {
+    background-color: #333333;
+    color: white;
+  }
+
   /*
   COLORS
    */
-  @include m("default") {
-    background-color: white;
-  }
-  @include m("primary") {
-    background-color: $primary_color;
-  }
-  @include m("warn") {
-    background-color: $warn_color;
-  }
-  @include m("danger") {
-    background-color: $danger_color;
-  }
-  @include m("info") {
-    background-color: $info_color;
+  @each $item in ("default", "primary", "warn", "danger", "info") {
+    @if ($item== "default") {
+      @include m("default") {
+        background-color: white;
+      }
+    } @else {
+      @include m($item) {
+        background-color: map_get($colorMap, $item);
+      }
+    }
   }
 
   /*

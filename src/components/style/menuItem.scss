@@ -44,6 +44,29 @@
 
   @include state("active") {
     background-color: $primary_color;
+    color: white;
+  }
+
+  @include state("title") {
+    font-size: 22px;
+    color: $primary_color;
+    &:hover,
+    &:active {
+      background-color: unset;
+      box-shadow: unset;
+      cursor: default;
+    }
+  }
+
+  @include state("sub-title") {
+    font-size: 18px;
+    color: grey;
+    &:hover,
+    &:active {
+      background-color: unset;
+      box-shadow: unset;
+      cursor: default;
+    }
   }
 
   @include state("dark") {
