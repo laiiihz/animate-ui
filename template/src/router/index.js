@@ -5,6 +5,7 @@ import ComponentView from "../views/ComponentView";
 import InstallPage from "../page/InstallPage";
 import FontPage from "../page/FontPage";
 import TransitionAnimation from "../page/TransitionAnimation";
+import ColorPage from "../page/ColorPage";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
         path: "transition",
         name: "transition",
         component: TransitionAnimation,
+      },
+      {
+        path: "color",
+        name: "color",
+        component: ColorPage,
       },
     ],
   },

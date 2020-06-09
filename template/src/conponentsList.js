@@ -27,6 +27,11 @@ let componentList = [
     path: "transition",
   },
   {
+    type: "sub",
+    name: "色彩",
+    path: "color",
+  },
+  {
     type: "subtitle",
     name: "基本",
   },
