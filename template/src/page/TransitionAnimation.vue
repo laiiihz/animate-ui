@@ -9,6 +9,7 @@
         @click="handleClick"
       ></div>
     </transition>
+    <code-preview :html="slideXValue.html" :dark="dark"></code-preview>
     <a-h h="2" :dark="dark">Slide-y</a-h>
     <transition name="slide-y" mode="out-in">
       <div
@@ -17,14 +18,24 @@
         @click="handleYClick"
       ></div>
     </transition>
+    <code-preview :html="slideYValue.html" :dark="dark"></code-preview>
+    <a-h h="2" :dark="dark">scale-up</a-h>
+    <transition name="scale-up" mode="out-in">
+      <div
+        :key="scaleUp"
+        :class="scaleUp ? 'slide-first' : 'slide-second'"
+        @click="handleScaleClick"
+      ></div>
+    </transition>
   </page-padding>
 </template>
 
 <script>
 import PagePadding from "./PagePadding";
+import CodePreview from "../components/CodePreview";
 export default {
   name: "TransitionAnimation",
-  components: { PagePadding },
+  components: { CodePreview, PagePadding },
   computed: {
     dark() {
       return this.$store.state.dark;
@@ -33,6 +44,13 @@ export default {
   data: () => ({
     slideX: false,
     slideY: false,
+    scaleUp: false,
+    slideXValue: {
+      html: `<transition name="slide-x" mode="out-in">`,
+    },
+    slideYValue: {
+      html: `<transition name="slide-y" mode="out-in">`,
+    },
   }),
   methods: {
     handleClick() {
@@ -40,6 +58,9 @@ export default {
     },
     handleYClick() {
       this.slideY = !this.slideY;
+    },
+    handleScaleClick() {
+      this.scaleUp = !this.scaleUp;
     },
   },
 };

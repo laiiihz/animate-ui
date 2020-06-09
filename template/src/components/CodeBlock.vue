@@ -3,7 +3,7 @@
     <pre>
         <code
                 :style="dark?'':'filter:invert(100%);'"
-                :class="type">{{data}}</code>
+                :class="type">{{aData}}</code>
     </pre>
   </div>
 </template>
@@ -12,7 +12,7 @@
 export default {
   name: "CodeBlock",
   props: {
-    data: String,
+    aData: String,
     type: String,
     dark: Boolean,
   },
@@ -27,9 +27,14 @@ code {
   -webkit-font-smoothing: subpixel-antialiased;
   font-variant-ligatures: contextual;
 }
+.code-block > pre {
+  margin: unset;
+    white-space: unset;
+}
 .code-block > pre > code {
   border-radius: 10px;
   overflow: auto;
+    white-space: pre-line;
 }
 .code-block > pre > code::-webkit-scrollbar {
   transition: 0.3s;

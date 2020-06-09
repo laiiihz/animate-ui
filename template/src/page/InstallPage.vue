@@ -2,9 +2,9 @@
   <page-padding>
     <a-h :dark="dark">安装</a-h>
     <a-h h="2" :dark="dark">npm 安装</a-h>
-    <code-block :dark="dark" type="bash" :data="npm"></code-block>
+    <code-block :dark="dark" type="bash" :a-data="npm"></code-block>
     <a-h h="2" :dark="dark">CDN加速</a-h>
-    <code-block :dark="dark" type="html" :data="cdn"></code-block>
+    <code-block :dark="dark" type="html" :a-data="cdn"></code-block>
     <a-alert
       type="info"
       title="建议生产环境使用CDN方式部署"

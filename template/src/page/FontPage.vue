@@ -13,12 +13,12 @@
 
     <code-block
       type="http"
-      data="https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip"
+      a-data="https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip"
       :dark="dark"
     >
     </code-block>
     <a-h h="2" :dark="dark">Font Family</a-h>
-    <code-block type="css" :data="fontFamily" :dark="dark"></code-block>
+    <code-block type="css" :a-data="fontFamily" :dark="dark"></code-block>
   </page-padding>
 </template>
 
