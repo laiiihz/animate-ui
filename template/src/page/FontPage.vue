@@ -17,6 +17,8 @@
       :dark="dark"
     >
     </code-block>
+    <a-h h="2" :dark="dark">Font Family</a-h>
+    <code-block type="css" :data="fontFamily" :dark="dark"></code-block>
   </page-padding>
 </template>
 
@@ -31,6 +33,9 @@ export default {
       return this.$store.state.dark;
     },
   },
+  data: () => ({
+    fontFamily: `font-family:"Noto Sans CJK SC Regular","Microsoft YaHei","微软雅黑",Arial,sans-serif;`,
+  }),
 };
 </script>
 

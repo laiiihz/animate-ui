@@ -32,6 +32,11 @@ let componentList = [
     path: "color",
   },
   {
+    type: "sub",
+    name: "阴影",
+    path: "shadow",
+  },
+  {
     type: "subtitle",
     name: "基本",
   },
