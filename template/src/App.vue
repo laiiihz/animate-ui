@@ -37,12 +37,15 @@
 export default {
   name: "app",
   methods: {
-    onclick() {
-      this.$router.push({ name: "ComponentView" });
-    },
     handleDarkMode() {
       this.$store.commit("changeDarkMode");
     },
+  },
+  mounted() {
+    this.$store.commit(
+      "changeDarkModeValue",
+      window.localStorage.getItem("darkMode") === "true"
+    );
   },
 };
 </script>

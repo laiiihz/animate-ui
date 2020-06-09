@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import ComponentView from "../views/ComponentView";
 import InstallPage from "../page/InstallPage";
 import FontPage from "../page/FontPage";
+import TransitionAnimation from "../page/TransitionAnimation";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
         path: "font",
         name: "font",
         component: FontPage,
+      },
+      {
+        path: "transition",
+        name: "transition",
+        component: TransitionAnimation,
       },
     ],
   },

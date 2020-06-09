@@ -1,18 +1,20 @@
 import "./style/index.scss";
-import AButton from "./button/AButton";
-import AHeader from "./header/AHeader";
-import AScrollbar from "./scrollbar/AScrollbar";
-import ACard from "./card/ACard";
-import AAlert from "./alert/AAlert";
-import AHeaderMenu from "./header/AHeaderMenu";
-import ACheckbox from "./checkbox/ACheckbox";
-import ARow from "./row/ARow";
-import AColumn from "./column/AColumn";
-import AContainer from "./container/AContainer";
-import AMenu from "./menu/AMenu";
-import AMenuItem from "./menu/AMenuItem";
-import AApp from "./app/AApp";
-import AH from "./heading/ah";
+import AButton from "./button/index";
+import AHeader from "./header/index";
+import AScrollbar from "./scrollbar/index";
+import ACard from "./card/index";
+import AAlert from "./alert/index";
+import AHeaderMenu from "./header/index";
+import ACheckbox from "./checkbox/index";
+import ARow from "./row/index";
+import AColumn from "./column/index";
+import AContainer from "./container/index";
+import AMenu from "./menu/index";
+import AMenuItem from "./menuItem/index";
+import AApp from "./app/index";
+import AH from "./heading/index";
+import ALink from "./link/index";
+
 const components = [
   AAlert,
   AApp,
@@ -24,6 +26,7 @@ const components = [
   AH,
   AHeader,
   AHeaderMenu,
+  ALink,
   AMenu,
   AMenuItem,
   ARow,
@@ -48,6 +51,7 @@ export default {
   AH,
   AHeader,
   AHeaderMenu,
+  ALink,
   AMenu,
   AMenuItem,
   ARow,

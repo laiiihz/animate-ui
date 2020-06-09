@@ -21,6 +21,15 @@ let componentList = [
     name: "字体",
     path: "font",
   },
+  {
+    type: "sub",
+    name: "过渡动画",
+    path: "transition",
+  },
+  {
+    type: "subtitle",
+    name: "基本",
+  },
 ];
 
 export default componentList;

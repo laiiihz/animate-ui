@@ -10,6 +10,11 @@ export default new Vuex.Store({
   mutations: {
     changeDarkMode(state) {
       state.dark = !state.dark;
+      window.localStorage.setItem("darkMode", state.dark.toString());
+      console.log(state.dark);
+    },
+    changeDarkModeValue(state, value) {
+      state.dark = value;
     },
   },
   actions: {},
