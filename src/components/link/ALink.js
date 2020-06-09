@@ -6,6 +6,7 @@ export default {
       type: String,
       default: "a",
     },
+    to: [String, Object],
     dark: Boolean,
     href: String,
     type: {
@@ -22,6 +23,11 @@ export default {
       validator: (val) => ["blank", "parent", "top", "self"].includes(val),
     },
   },
+  beforeMount() {
+    if (this.to) {
+      this.tag = "router-link";
+    }
+  },
   computed: {
     rawTarget() {
       return `_${this.target}`;
@@ -34,6 +40,9 @@ export default {
         attrs: {
           href: this.disabled ? null : this.href,
           target: this.rawTarget,
+        },
+        props: {
+          to: this.to,
         },
         class: [
           "a-link",
