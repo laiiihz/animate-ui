@@ -5,7 +5,8 @@ export default {
     h: {
       type: [String, Number],
       default: 1,
-      validator: (val) => [1, 2, 3, 4, 5, 6].includes(val),
+      validator: (val) =>
+        [1, 2, 3, 4, 5, 6, "1", "2", "3", "4", "5", "6"].includes(val),
     },
     dark: Boolean,
   },
