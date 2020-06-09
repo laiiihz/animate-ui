@@ -3,7 +3,9 @@
     <a-h :dark="dark">字体</a-h>
     <a-h h="2" :dark="dark">字体下载安装</a-h>
     <a-h h="3" :dark="dark"
-      >推荐使用<a-link :dark="dark" type="primary"
+      >推荐使用<a-link
+        :dark="dark"
+        type="primary"
         href="https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip"
         >Noto Sans<i class="material-icons">link</i></a-link
       >
