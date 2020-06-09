@@ -53,6 +53,7 @@ export default {
     size: {
       type: String,
       default: "medium",
+      validator: (val) => ["medium", "large", "small"].includes(val),
     },
     icon: String,
     circle: Boolean,

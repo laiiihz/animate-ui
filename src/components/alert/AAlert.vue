@@ -27,6 +27,8 @@ export default {
     type: {
       type: String,
       default: "default",
+      validator: (val) =>
+        ["default", "primary", "info", "warn", "danger"].includes(val),
     },
     title: String,
     subTitle: String,

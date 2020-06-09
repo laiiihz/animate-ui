@@ -19,6 +19,7 @@ export default {
     direction: {
       type: String,
       default: "vertical",
+      validator: (val) => ["vertical", "horizontal"].includes(val),
     },
     disabled: Boolean,
     border: Boolean,
