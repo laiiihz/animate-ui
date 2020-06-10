@@ -37,7 +37,6 @@ code {
     white-space: pre-line;
 }
 .code-block > pre > code::-webkit-scrollbar {
-  transition: 0.3s;
   height: 5px;
   background-color: rgba(0, 0, 0, 0.4);
 }

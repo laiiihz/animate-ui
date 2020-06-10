@@ -7,6 +7,7 @@ import FontPage from "../page/FontPage";
 import TransitionAnimation from "../page/TransitionAnimation";
 import ColorPage from "../page/ColorPage";
 import ShadowPage from "../page/ShadowPage";
+import ButtonPage from "../componentPage/ButtonPage";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
         path: "shadow",
         name: "shadow",
         component: ShadowPage,
+      },
+      {
+        path: "button",
+        name: "button",
+        component: ButtonPage,
       },
     ],
   },

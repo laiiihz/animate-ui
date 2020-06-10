@@ -1,6 +1,33 @@
 @import "mixins/mixins";
 
-@include b("scrollbar"){
-  overflow: hidden;
+@include b("scrollbar") {
+  overflow: auto;
   position: relative;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include m("bar") {
+    transition: opacity 0.3s;
+  }
+}
+
+@include b("scrollbar-css") {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  @include state("dark") {
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
 }

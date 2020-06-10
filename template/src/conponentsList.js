@@ -40,6 +40,11 @@ let componentList = [
     type: "subtitle",
     name: "基本",
   },
+  {
+    type: "sub",
+    name: "按钮",
+    path: "button",
+  },
 ];
 
 export default componentList;

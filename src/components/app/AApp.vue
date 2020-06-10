@@ -14,9 +14,10 @@ export default {
 </script>
 
 <style>
-  html,body{
-    height: 100%;
-    width: 100%;
-    margin: unset;
-  }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: unset;
+}
 </style>

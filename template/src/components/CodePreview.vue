@@ -39,12 +39,12 @@ export default {
     updateHeight() {
       this.timer = setTimeout(() => {
         this.$refs.previewRef.style.height =
-          this.$refs.blockRef.$el.firstElementChild.offsetHeight + 50 + "px";
+          this.$refs.blockRef.$el.firstElementChild.offsetHeight + 45+ "px";
       }, 500);
     },
     mouseLeave() {
       clearTimeout(this.timer);
-      this.$refs.previewRef.style.height = 50 + "px";
+      this.$refs.previewRef.style.height = 45 + "px";
     },
   },
   props: {
@@ -63,7 +63,7 @@ export default {
     this.html ? this.codeTypes.push("html") : null;
     this.js ? this.codeTypes.push("js") : null;
     this.css ? this.codeTypes.push("css") : null;
-    this.$refs.previewRef.style.height = "50px";
+    this.$refs.previewRef.style.height = "45px";
   },
   data: () => ({
     current: "",
