@@ -29,12 +29,12 @@ code {
 }
 .code-block > pre {
   margin: unset;
-    white-space: unset;
+  white-space: unset;
 }
 .code-block > pre > code {
   border-radius: 10px;
   overflow: auto;
-    white-space: pre-line;
+  white-space: pre-wrap;
 }
 .code-block > pre > code::-webkit-scrollbar {
   height: 5px;

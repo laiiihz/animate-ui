@@ -1,5 +1,5 @@
 <template>
-  <page-padding>
+  <page-padding :dark="dark">
     <a-h :dark="dark">阴影</a-h>
     <div v-for="item in 4" :key="item">
       <a-h :dark="dark" h="2">阴影高度:{{ item }}</a-h>

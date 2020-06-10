@@ -27,6 +27,7 @@
         @click="handleScaleClick"
       ></div>
     </transition>
+    <code-preview :html="scaleUpValue.html" :dark="dark"></code-preview>
   </page-padding>
 </template>
 
@@ -51,6 +52,9 @@ export default {
     slideYValue: {
       html: `<transition name="slide-y" mode="out-in">`,
     },
+    scaleUpValue: {
+      html:`<transition name="scale-up" mode="out-in">`
+    }
   }),
   methods: {
     handleClick() {

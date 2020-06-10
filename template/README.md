@@ -1,4 +1,4 @@
-# template
+# Animate-UI Document
 
 ## Project setup
 ```

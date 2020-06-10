@@ -26,9 +26,11 @@
           xl: 4,
         }"
       >
-        <transition name="slide-x" mode="out-in">
-          <router-view></router-view>
-        </transition>
+        <a-scrollbar height="100vh">
+          <transition name="slide-x" mode="out-in">
+            <router-view></router-view>
+          </transition>
+        </a-scrollbar>
       </a-container>
     </a-app>
   </div>

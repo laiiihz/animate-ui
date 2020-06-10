@@ -8,12 +8,21 @@ export default {
     },
     dark: Boolean,
   },
+  computed: {
+    heightValue() {
+      if (typeof this.height == "number") {
+        return `${this.height}px`;
+      } else {
+        return this.height;
+      }
+    },
+  },
   render(h) {
     return h(
       "div",
       {
         class: ["a-scrollbar-css", { "is-dark": this.dark }],
-        style: `height:${this.height}px`,
+        style: `height:${this.heightValue}`,
       },
       this.$slots.default
     );
