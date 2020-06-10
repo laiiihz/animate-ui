@@ -14,15 +14,17 @@ import AMenuItem from "./menuItem/index";
 import AApp from "./app/index";
 import AH from "./heading/index";
 import ALink from "./link/index";
+import ADrawer from "./drawer/index";
 
 const components = [
   AAlert,
   AApp,
   AButton,
   ACard,
-  AContainer,
   ACheckbox,
   AColumn,
+  AContainer,
+  ADrawer,
   AH,
   AHeader,
   AHeaderMenu,
@@ -45,9 +47,10 @@ export default {
   AApp,
   AButton,
   ACard,
+  ACheckbox,
   AColumn,
   AContainer,
-  ACheckbox,
+  ADrawer,
   AH,
   AHeader,
   AHeaderMenu,
