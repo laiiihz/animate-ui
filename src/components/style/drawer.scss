@@ -1,5 +1,70 @@
 @import "mixins/mixins";
+@import "animations";
+$directions: ("left", "right", "top", "bottom");
+@include b("drawer-mask") {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-@include b("drawer"){
-  
+@include b("drawer") {
+  display: flex;
+  background-color: white;
+  @include state("dark") {
+    background-color: #333333;
+  }
+  @each $item in $directions {
+    @if ($item== "left" or $item== "right") {
+      @include m($item) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        @if ($item== "left") {
+          left: 0;
+          box-shadow: get_shadow("right", 3);
+        } @else {
+          right: 0;
+          box-shadow: get_shadow("left", 3);
+        }
+      }
+    } @else {
+      @include m($item) {
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        @if ($item== "top") {
+          top: 0;
+          box-shadow: get_shadow("bottom", 3);
+        } @else {
+          bottom: 0;
+          box-shadow: get_shadow("top", 3);
+        }
+      }
+    }
+  }
+}
+/*
+drawer close and open animation
+*/
+@each $item in $directions {
+  $direction_animation: (
+    "left": translateX(-100%),
+    "right": translateX(100%),
+    "top": translateY(-100%),
+    "bottom": translateY(100%),
+  );
+  @include animation_enter(#{$item}-animation) {
+    transform: map_get($direction_animation, $item);
+  }
+  @include animation_leave(#{$item}-animation) {
+    transform: map_get($direction_animation, $item);
+  }
 }
