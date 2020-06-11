@@ -1,9 +1,57 @@
+$shadow_color_global: (
+  1: 3px rgba(0, 0, 0, 0.12),
+  2: 6px rgba(0, 0, 0, 0.16),
+  3: 20px rgba(0, 0, 0, 0.19),
+  4: 28px rgba(0, 0, 0, 0.25),
+);
+
+$shadow_color_single: (
+  1: 2px rgba(0, 0, 0, 0.24),
+  2: 6px rgba(0, 0, 0, 0.23),
+  3: 6px rgba(0, 0, 0, 0.23),
+  4: 10px rgba(0, 0, 0, 0.22),
+);
+
+$shadow_height_global: (
+  1: 1px,
+  2: 3px,
+  3: 10px,
+  4: 14px,
+);
+
+$shadow_height_single: (
+  1: 1px,
+  2: 3px,
+  3: 6px,
+  4: 10px,
+);
+
+$shadow_directions: ("bottom", "left", "top", "right");
+@function get_shadow($direction: "bottom", $height: 1) {
+  $color1: map_get($shadow_color_global, $height);
+  $color2: map_get($shadow_color_single, $height);
+  $height1: map_get($shadow_height_global, $height);
+  $height2: map_get($shadow_height_single, $height);
+  @if ($direction== "bottom") {
+    @return 0 $height1 $color1, 0 $height2 $color2;
+  }
+  @if ($direction== "top") {
+    @return 0 -#{$height1} $color1, 0 -#{$height2} $color2;
+  }
+  @if ($direction== "left") {
+    @return -#{$height1} 0 $color1, -#{$height2} 0 $color2;
+  }
+  @if ($direction== "right") {
+    @return $height1 0 $color1, $height2 0 $color2;
+  }
+}
+
 $elevation0: unset;
 $elevation1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 $elevation2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 $elevation3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 $elevation4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
-$art_elevation1: 3px 3px 0 0 rgba(0,0,0,0.12);
-$art_elevation2: 6px 6px 0 0 rgba(0,0,0,0.12);
-$art_elevation3: 12px 12px 0 0 rgba(0,0,0,0.12);
+$art_elevation1: 3px 3px 0 0 rgba(0, 0, 0, 0.12);
+$art_elevation2: 6px 6px 0 0 rgba(0, 0, 0, 0.12);
+$art_elevation3: 12px 12px 0 0 rgba(0, 0, 0, 0.12);
