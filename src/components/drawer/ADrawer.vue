@@ -3,7 +3,7 @@
     <div
       @click.self="handleClick"
       :class="['a-drawer-mask']"
-      :style="blur ? `backdrop-filter: blur(${blurValue})` : ''"
+      :style="[blurValue]"
       v-show="visible"
     >
       <transition :name="`${direction}-animation`">
@@ -11,7 +11,11 @@
           v-show="visible"
           :class="['a-drawer', 'a-drawer--' + direction, { 'is-dark': dark }]"
           :style="[this.widthStyle, this.heightStyle]"
-        ></div>
+        >
+          <div @click="handleClose" :class="['a-drawer__close']">
+            <i :class="['material-icons', 'a-drawer__close--icon']">close</i>
+          </div>
+        </div>
       </transition>
     </div>
   </transition>
@@ -31,24 +35,23 @@ export default {
       default: "left",
       validator: (val) => ["left", "right", "top", "bottom"].includes(val),
     },
-    width: {
-      type: [Number, String],
-    },
-    height: {
-      type: [Number, String],
-    },
+    width: [Number, String],
+    height: [Number, String],
   },
   computed: {
     blurValue() {
-      if (typeof this.blur == "boolean") {
-        return "5px";
-      } else if (typeof this.blur == "number") {
-        return `${this.blur}px`;
-      } else {
-        if (this.blur.indexOf("px") === -1) {
-          return `${this.blur}px`;
-        }
-        return this.blur;
+      switch (typeof this.blur) {
+        case "boolean":
+          return { backdropFilter: "blur(5px)" };
+        case "number":
+          return { backdropFilter: `blur(${this.blur}px)` };
+        case "string":
+          if (this.blur.indexOf("px") === -1)
+            return { backdropFilter: `blur(${this.blur}px)` };
+          else return { backdropFilter: `blur(${this.blur})` };
+        case "undefined":
+        default:
+          return {};
       }
     },
     widthStyle() {
@@ -82,13 +85,16 @@ export default {
     handleClick() {
       this.$emit("update:visible", false);
     },
+    handleClose() {
+      this.$emit("update:visible", false);
+    },
   },
   watch: {},
 };
 </script>
 
 <style scoped lang="scss">
-@import "../style/animations";
+@import "../style/mixins/mixins";
 @include animation_enter("fade", 0.3s) {
   opacity: 0;
 }

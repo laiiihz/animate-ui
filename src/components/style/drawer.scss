@@ -1,5 +1,4 @@
 @import "mixins/mixins";
-@import "animations";
 $directions: ("left", "right", "top", "bottom");
 @include b("drawer-mask") {
   display: flex;
@@ -13,9 +12,47 @@ $directions: ("left", "right", "top", "bottom");
 
 @include b("drawer") {
   display: flex;
-  background-color: white;
+  background-color: #eeeeee;
   @include state("dark") {
     background-color: #333333;
+  }
+  @include e("close") {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    height: 28px;
+    width: 28px;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s;
+    &:after {
+      transition: 0.3s;
+      height: 28px;
+      width: 28px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      border-radius: 14px;
+      background-color: rgba(0, 0, 0, 0.2);
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    &:hover:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &:hover {
+      transform: rotate(90deg);
+    }
+    &:active:after {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    @include m("icon") {
+      line-height: 28px;
+    }
   }
   @each $item in $directions {
     @if ($item== "left" or $item== "right") {

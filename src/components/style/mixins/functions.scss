@@ -37,3 +37,25 @@
   @return containerPseudoClass($selector) or containModifier($selector) or
     containWhenFlag($selector);
 }
+
+@mixin animation_enter($prefix, $time: 0.3s) {
+  $prefix_enter_active: $prefix + "-enter-active";
+  $prefix_enter: $prefix + "-enter";
+  .#{$prefix_enter_active} {
+    transition: all $time ease-in-out;
+  }
+  .#{$prefix_enter} {
+    @content;
+  }
+}
+
+@mixin animation_leave($prefix, $time: 0.3s) {
+  $prefix_leave_active: $prefix + "-leave-active";
+  $prefix_leave: $prefix + "-leave-to";
+  .#{$prefix_leave_active} {
+    transition: all $time ease-in-out;
+  }
+  .#{$prefix_leave} {
+    @content;
+  }
+}

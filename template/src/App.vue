@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a-app :dark="$store.state.dark">
+    <a-app :dark="dark">
       <a-header :dark="$store.state.dark" fixed blur dense under-round>
         Animate UI
         <template slot="leading">
@@ -26,7 +26,7 @@
           xl: 4,
         }"
       >
-        <a-scrollbar height="100vh">
+        <a-scrollbar :dark="dark" height="100vh">
           <transition name="slide-x" mode="out-in">
             <router-view></router-view>
           </transition>
@@ -41,6 +41,11 @@ export default {
   methods: {
     handleDarkMode() {
       this.$store.commit("changeDarkMode");
+    },
+  },
+  computed: {
+    dark() {
+      return this.$store.state.dark;
     },
   },
   mounted() {
