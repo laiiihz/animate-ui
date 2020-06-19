@@ -124,14 +124,26 @@
   /*
   COLORS
    */
-  @each $item in ("default", "primary", "warn", "danger", "info") {
+  @each $item
+    in (
+      "default",
+      "primary",
+      "warn",
+      "danger",
+      "info",
+      "primary-dark",
+      "warn-dark",
+      "danger-dark",
+      "info-dark"
+    )
+  {
     @if ($item== "default") {
       @include m("default") {
         background-color: white;
       }
     } @else {
       @include m($item) {
-        background-color: map_get($colorMap, $item);
+        background-color: map_get($colorMap, $item) !important;
       }
     }
   }
