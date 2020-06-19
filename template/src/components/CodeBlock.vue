@@ -3,7 +3,7 @@
     <pre>
         <code
                 :style="dark?'':'filter:invert(100%);'"
-                :class="type">{{aData}}</code>
+                :class="['type']">{{aData}}</code>
     </pre>
   </div>
 </template>
@@ -19,9 +19,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 code {
-  font-family: "Noto Sans Mono CJK SC", monospace;
+  font-family: "Jetbrains Mono", monospace;
   font-size: 16px;
   font-weight: lighter;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -47,5 +47,8 @@ code {
 .code-block > pre:hover > ::-webkit-scrollbar {
   height: 10px;
   background-color: rgba(0, 0, 0, 0.4);
+}
+.hljs{
+    background-color: #121212;
 }
 </style>
