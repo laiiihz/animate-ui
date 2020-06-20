@@ -1,5 +1,5 @@
 import hljs from "highlight.js";
-import "highlight.js/styles/agate.css";
+import "highlight.js/styles/androidstudio.css";
 
 let Highlight = {};
 

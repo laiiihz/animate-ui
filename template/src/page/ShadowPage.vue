@@ -4,7 +4,12 @@
     <div v-for="item in 4" :key="item">
       <a-h :dark="dark" h="2">阴影高度:{{ item }}</a-h>
       <div class="shadow-div" :class="'shadow_height_' + item"></div>
-      <code-preview :dark="dark" :html="getShadowHtml(item)"></code-preview>
+      <code-preview
+        :dark="dark"
+        :value-object="{
+          html: getShadowHtml(item),
+        }"
+      ></code-preview>
     </div>
   </page-padding>
 </template>

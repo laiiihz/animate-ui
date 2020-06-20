@@ -9,7 +9,7 @@
         @click="handleClick"
       ></div>
     </transition>
-    <code-preview :html="slideXValue.html" :dark="dark"></code-preview>
+    <code-preview :value-object="slideXValue" :dark="dark"></code-preview>
     <a-h h="2" :dark="dark">Slide-y</a-h>
     <transition name="slide-y" mode="out-in">
       <div
@@ -18,7 +18,7 @@
         @click="handleYClick"
       ></div>
     </transition>
-    <code-preview :html="slideYValue.html" :dark="dark"></code-preview>
+    <code-preview :value-object="slideYValue" :dark="dark"></code-preview>
     <a-h h="2" :dark="dark">scale-up</a-h>
     <transition name="scale-up" mode="out-in">
       <div
@@ -27,7 +27,7 @@
         @click="handleScaleClick"
       ></div>
     </transition>
-    <code-preview :html="scaleUpValue.html" :dark="dark"></code-preview>
+    <code-preview :value-object="scaleUpValue" :dark="dark"></code-preview>
   </page-padding>
 </template>
 
@@ -53,8 +53,8 @@ export default {
       html: `<transition name="slide-y" mode="out-in">`,
     },
     scaleUpValue: {
-      html:`<transition name="scale-up" mode="out-in">`
-    }
+      html: `<transition name="scale-up" mode="out-in">`,
+    },
   }),
   methods: {
     handleClick() {

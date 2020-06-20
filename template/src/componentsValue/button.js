@@ -1,0 +1,85 @@
+export default [
+  {
+    name: "auto-focus",
+    default: "",
+    des: "原生html属性",
+    type: "boolean",
+  },
+  {
+    name: "icon",
+    default: "unset",
+    des: "Icon模式",
+    type: "String",
+  },
+  {
+    name: "circle",
+    type: "Boolean",
+    des: "圆形按钮(与icon搭配)",
+    default: "false",
+  },
+  {
+    name: "round",
+    type: "Boolean",
+    des: "圆角按钮",
+    default: "false",
+  },
+  {
+    name: "rect",
+    type: "Boolean",
+    des: "方形按钮",
+    default: "false",
+  },
+  {
+    name: "disabled",
+    type: "Boolean",
+    des: "按钮禁用",
+    default: "false",
+  },
+  {
+    name: "dash",
+    type: "Boolean",
+    des: "Dash边框",
+    default: "false",
+  },
+  {
+    name: "text",
+    type: "Boolean",
+    des: "文字按钮",
+    default: "false",
+  },
+  {
+    name: "flat",
+    type: "Boolean",
+    des: "扁平按钮",
+    default: "false",
+  },
+  {
+    name: "outline",
+    type: "Boolean",
+    des: "外边框",
+    default: "false",
+  },
+  {
+    name: "artElevation",
+    type: "Boolean",
+    des: "艺术阴影",
+    default: "false",
+  },
+  {
+    name: "to",
+    type: "String,Object",
+    des: "router-link to attribute",
+  },
+  {
+    name: "bold",
+    default: "false",
+    des: "粗体",
+    type: "Boolean",
+  },
+  {
+    name: "dark",
+    default: "false",
+    des: "暗黑模式",
+    type: "boolean",
+  },
+];

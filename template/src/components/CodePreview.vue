@@ -9,7 +9,7 @@
       v-for="item in codeTypes"
       :key="item"
       :dark="dark"
-      :type="current === item ? 'primary' : null"
+      :type="getButtonType(item)"
       @click="clickBlock(item)"
     >
       {{ item }}
@@ -32,6 +32,13 @@ export default {
   name: "CodePreview",
   components: { CodeBlock },
   methods: {
+    getButtonType(item) {
+      return this.current === item
+        ? this.codeTypes.length === 1
+          ? null
+          : "primary"
+        : null;
+    },
     clickBlock(item) {
       this.current = item;
       this.value = this.valueObject[item];

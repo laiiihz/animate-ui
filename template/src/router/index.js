@@ -21,6 +21,7 @@ const routes = [
     path: "/components",
     name: "ComponentView",
     component: ComponentView,
+    redirect:"components/install",
     children: [
       {
         path: "install",
