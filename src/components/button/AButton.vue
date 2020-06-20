@@ -4,8 +4,8 @@
     :autofocus="autoFocus"
     :class="[
       'a-button',
-      `a-button--${type}${dark?'-dark':''}`,
-     `a-button--${size}`,
+      `a-button--${type}${dark ? '-dark' : ''}`,
+      `a-button--${size}`,
       icon && $slots.default ? 'a-button-anime' : '',
       {
         'is-disabled': disabled,
@@ -65,7 +65,9 @@ export default {
     flat: Boolean,
     outline: Boolean,
     artElevation: Boolean,
-    to: String,
+    to: {
+      type: [String, Object],
+    },
     dark: Boolean,
     bold: Boolean,
   },
