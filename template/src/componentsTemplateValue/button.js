@@ -17,12 +17,4 @@ export default {
   dash: {
     html: `<a-button dash>Dash</a-button>`,
   },
-  darkMode: {
-    html: `<a-button dark v-for="item in types" :type="item" :key="item">
-      {{ item }}
-</a-button>`,
-    js: `data: () => ({
-          types: ["default", "primary", "info", "warn", "danger"],
-)}`,
-  },
 };

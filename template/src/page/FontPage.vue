@@ -25,14 +25,11 @@
 <script>
 import PagePadding from "./PagePadding";
 import CodeBlock from "../components/CodeBlock";
+import darkMixin from "../mixins/darkMixin";
 export default {
   name: "FontPage",
   components: { CodeBlock, PagePadding },
-  computed: {
-    dark() {
-      return this.$store.state.dark;
-    },
-  },
+  mixins:[darkMixin],
   data: () => ({
     fontFamily: `font-family:"Noto Sans CJK SC Regular","Microsoft YaHei","微软雅黑",Arial,sans-serif;`,
   }),

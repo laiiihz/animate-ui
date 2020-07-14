@@ -8,6 +8,9 @@ import TransitionAnimation from "../page/TransitionAnimation";
 import ColorPage from "../page/ColorPage";
 import ShadowPage from "../page/ShadowPage";
 import ButtonPage from "../componentPage/ButtonPage";
+import CardPage from "../componentPage/CardPage";
+import Drawerpage from "../componentPage/Drawerpage";
+import LinkPage from "../componentPage/LinkPage";
 
 Vue.use(VueRouter);
 
@@ -52,6 +55,21 @@ const routes = [
         path: "button",
         name: "button",
         component: ButtonPage,
+      },
+      {
+        path: "card",
+        name: "card",
+        component: CardPage,
+      },
+      {
+        path: "drawer",
+        name: "drawer",
+        component: Drawerpage,
+      },
+      {
+        path: "link",
+        name: "link",
+        component: LinkPage,
       },
     ],
   },

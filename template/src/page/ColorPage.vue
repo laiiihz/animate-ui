@@ -30,14 +30,11 @@
 
 <script>
 import PagePadding from "./PagePadding";
+import darkMixin from "../mixins/darkMixin";
 export default {
   name: "ColorPage",
   components: { PagePadding },
-  computed: {
-    dark() {
-      return this.$store.state.dark;
-    },
-  },
+  mixins:[darkMixin],
   data: () => ({
     types: [
       {

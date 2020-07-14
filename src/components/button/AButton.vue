@@ -19,6 +19,7 @@
         'is-art-elevation': artElevation,
         'is-dark': dark,
         'is-bold': bold,
+        'is-push': push,
       },
     ]"
   >
@@ -70,6 +71,7 @@ export default {
     },
     dark: Boolean,
     bold: Boolean,
+    push: Boolean,
   },
   methods: {
     handleClick(event) {

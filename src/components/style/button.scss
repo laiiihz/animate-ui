@@ -94,6 +94,29 @@
     }
   }
 
+  @include state("push") {
+    position: relative;
+    border: unset;
+    &:after {
+      border-radius: 5px;
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+      transition: 0.3s;
+    }
+    &:active:after {
+      border-bottom-width: 0;
+    }
+    &:active{
+      transform: translateY(3px);
+    }
+  }
+
   @include state("outline") {
     box-shadow: unset;
     &:hover,

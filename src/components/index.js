@@ -15,6 +15,7 @@ import AApp from "./app/index";
 import AH from "./heading/index";
 import ALink from "./link/index";
 import ADrawer from "./drawer/index";
+import AClipboard from "./clipboard/index";
 
 const components = [
   AAlert,
@@ -22,6 +23,7 @@ const components = [
   AButton,
   ACard,
   ACheckbox,
+  AClipboard,
   AColumn,
   AContainer,
   ADrawer,
@@ -48,6 +50,7 @@ export default {
   AButton,
   ACard,
   ACheckbox,
+  AClipboard,
   AColumn,
   AContainer,
   ADrawer,

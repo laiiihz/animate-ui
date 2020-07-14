@@ -16,14 +16,11 @@
 <script>
 import CodeBlock from "../components/CodeBlock";
 import PagePadding from "./PagePadding";
+import darkMixin from "../mixins/darkMixin";
 export default {
   name: "InstallPage",
   components: { PagePadding, CodeBlock },
-  computed: {
-    dark() {
-      return this.$store.state.dark;
-    },
-  },
+  mixins:[darkMixin],
   data: () => ({
     npm: "npm install animate-ui@latest",
     cdn:

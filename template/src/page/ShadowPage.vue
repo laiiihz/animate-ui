@@ -17,14 +17,11 @@
 <script>
 import PagePadding from "./PagePadding";
 import CodePreview from "../components/CodePreview";
+import darkMixin from "../mixins/darkMixin";
 export default {
   name: "ShadowPage",
   components: { CodePreview, PagePadding },
-  computed: {
-    dark() {
-      return this.$store.state.dark;
-    },
-  },
+  mixins:[darkMixin],
   methods: {
     getShadowHtml(shadow) {
       return `<div class="shadow_height_${shadow}"></div>`;

@@ -34,14 +34,11 @@
 <script>
 import PagePadding from "./PagePadding";
 import CodePreview from "../components/CodePreview";
+import darkMixin from "../mixins/darkMixin";
 export default {
   name: "TransitionAnimation",
   components: { CodePreview, PagePadding },
-  computed: {
-    dark() {
-      return this.$store.state.dark;
-    },
-  },
+  mixins:[darkMixin],
   data: () => ({
     slideX: false,
     slideY: false,

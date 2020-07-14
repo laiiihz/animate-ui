@@ -45,6 +45,25 @@ let componentList = [
     name: "按钮",
     path: "button",
   },
+  {
+    type: "sub",
+    name: "链接",
+    path: "link",
+  },
+  {
+    type: "sub",
+    name: "卡片",
+    path: "card",
+  },
+  {
+    type: "subtitle",
+    name: "Extra",
+  },
+  {
+    type: "sub",
+    name: "抽屉",
+    path: "drawer",
+  },
 ];
 
 export default componentList;

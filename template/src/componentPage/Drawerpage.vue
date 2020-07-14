@@ -1,13 +1,13 @@
 <template>
     <page-padding>
-        <a-h dark="dark">卡片</a-h>
+        <a-h dark="dark">抽屉</a-h>
     </page-padding>
 </template>
 
 <script>
     import PagePadding from "../page/PagePadding";
     export default {
-        name: "CardPage",
+        name: "Drawerpage",
         components: {PagePadding}
     }
 </script>
