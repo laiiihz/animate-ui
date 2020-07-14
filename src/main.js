@@ -1,10 +1,11 @@
 import Vue from "vue";
-import App from "./App.vue";
 import VueRouter from "vue-router";
-import "./components/style/index.scss";
+import PulseTemplate from "./directives/PulseTemplate";
+import Pulse from "./directives/Pulse";
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
+Vue.directive("pulse", Pulse);
 new Vue({
-  render: (h) => h(App),
+  render: (h) => h(PulseTemplate),
 }).$mount("#app");

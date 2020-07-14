@@ -16,6 +16,7 @@ import AH from "./heading/index";
 import ALink from "./link/index";
 import ADrawer from "./drawer/index";
 import AClipboard from "./clipboard/index";
+import Pulse from "../directives/Pulse";
 
 const components = [
   AAlert,
@@ -41,6 +42,7 @@ const install = function (Vue) {
   components.forEach((component) => {
     Vue.component(component.name, component);
   });
+  Vue.directives("pulse", Pulse);
 };
 
 export default {
@@ -62,4 +64,5 @@ export default {
   AMenuItem,
   ARow,
   AScrollbar,
+  Pulse,
 };
